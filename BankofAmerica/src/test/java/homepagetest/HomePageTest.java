@@ -13,13 +13,11 @@ public class HomePageTest extends WebAPI {
     //instance of HomepageClass
     HomePage homePage;
 
-
     @BeforeMethod
-    public void getInit(){
-        homePage= PageFactory.initElements(driver,HomePage.class);
+    public void getInit() {
+        homePage = PageFactory.initElements(driver, HomePage.class);
 
     }
-
 //
 //    @Test(enabled = true)
 //    public void testSearchBox() throws InterruptedException {
@@ -30,7 +28,6 @@ public class HomePageTest extends WebAPI {
 //        String actualText=homePage.searchText.getText();
 //        Assert.assertEquals(actualText,expectedText,"Product does not match");
 //    }
-
 //    @Test
 //    public void testSearchBox1() throws InterruptedException {
 //        homePage.searchBox();
@@ -41,8 +38,8 @@ public class HomePageTest extends WebAPI {
 //
 //    }
 
-    @Test
-    public void aboutUsTest(){
+    @Test(enabled = true)
+    public void aboutUsTest() {
         homePage.clickAboutUS();
     }
 
