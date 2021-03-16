@@ -145,10 +145,10 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <!--Test Runner Files-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/AmazonTestRunner.xml</suiteXmlFile>
-                        <!--                        <suiteXmlFile>target/test-classes/CNNTestRunner.xml</suiteXmlFile>-->
-                        <!--                        <suiteXmlFile>target/test-classes/CignaTestRunner.xml</suiteXmlFile>-->
-
+                        <suiteXmlFile>target/test-classes/BankofAmericaTestRunner.xml</suiteXmlFile>
+                        <!--                        <suiteXmlFile>target/test-classes/BookingTestRunner.xml</suiteXmlFile>-->
+                        <!--                        <suiteXmlFile>target/test-classes/MacysTestRunner.xml</suiteXmlFile>-->
+                        <!--                        <suiteXmlFile>target/test-classes/StatefarmsTestRunner.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
 
 
