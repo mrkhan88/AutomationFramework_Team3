@@ -3,7 +3,6 @@ package homepagetest;
 import common.WebAPI;
 import homepage.HomePage;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -63,7 +62,7 @@ public class HomePageTest extends WebAPI {
         homePage.rightClickEnroll();
         sleepFor(5);
     }
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void createAccount() throws InterruptedException {
         homePage.openBasicAccount();
     }
@@ -72,4 +71,7 @@ public class HomePageTest extends WebAPI {
 //       homePage.tabWindows();
 //
 //    }
+
+    public static class MacysHomePageTest {
+    }
 }
