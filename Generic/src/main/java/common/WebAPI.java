@@ -119,20 +119,16 @@ public class WebAPI {
 
     // Browser Setup
     public static WebDriver driver = null;
-//    public static String browserStack_userName = "demo579";
-    public static String browserStack_userName = "rotefiv1";
-//    public static String browserStack_accessKey = "s8gx9NYyS3zW9kLcbmcH";
-    public static String browserStack_accessKey = "QH27txpr39CsSbfRtSqB";
+    public static String browserStack_userName = "demo579";
+    public static String browserStack_accessKey = "s8gx9NYyS3zW9kLcbmcH";
     public static String sauceLabs_userName = "";
     public static String sauceLabs_accessKey = "";
 
 
     @Parameters({"useCloudEnv", "cloudEnvName", "OS", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
-//    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("sauceLabs") String cloudEnvName, @Optional("windows") String OS, @Optional("10") String os_version, @Optional("firefox") String browserName, @Optional("86") String browserVersion, @Optional("https://www.google.com/") String url) throws IOException {
-     public void setUp(boolean useCloudEnv, String cloudEnvName, String OS, String os_version, String browserName, String browserVersion, String url) throws IOException {
-
-// Platform: Local Machine/ Cloud Machine
+    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("sauceLabs") String cloudEnvName, @Optional("windows") String OS, @Optional("10") String os_version, @Optional("firefox") String browserName, @Optional("86") String browserVersion, @Optional("https://www.google.com/") String url) throws IOException {
+        // Platform: Local Machine/ Cloud Machine
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserStack")) {
                 getCloudDriver(cloudEnvName, browserStack_userName, browserStack_accessKey, OS, os_version, browserName, browserVersion);

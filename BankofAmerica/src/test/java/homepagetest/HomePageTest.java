@@ -20,29 +20,9 @@ public class HomePageTest extends WebAPI {
 
     }
 
-//
-//    @Test(enabled = true)
-//    public void testSearchBox() throws InterruptedException {
-//
-//        homePage.searchBox();
-//        // Verify expected vs Actual
-//        String expectedText="\"Mask\"";
-//        String actualText=homePage.searchText.getText();
-//        Assert.assertEquals(actualText,expectedText,"Product does not match");
-//    }
-
-//    @Test
-//    public void testSearchBox1() throws InterruptedException {
-//        homePage.searchBox();
-//        sleepFor(3);
-//        String expectedText="\"Mask1\"";
-//        String actualText=homePage.searchText.getText();
-//        Assert.assertEquals(actualText,expectedText,"Product does not match");
-//
-//    }
-
     @Test
     public void aboutUsTest(){
+        //homePage= PageFactory.initElements(driver,HomePage.class);
         homePage.clickAboutUS();
     }
 
