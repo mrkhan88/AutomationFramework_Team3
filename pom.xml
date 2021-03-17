@@ -146,9 +146,9 @@
                     <!--Test Runner Files-->
                     <suiteXmlFiles>
                         <suiteXmlFile>target/test-classes/BankofAmericaTestRunner.xml</suiteXmlFile>
-                        <!--                        <suiteXmlFile>target/test-classes/BookingTestRunner.xml</suiteXmlFile>-->
-                        <!--                        <suiteXmlFile>target/test-classes/MacysTestRunner.xml</suiteXmlFile>-->
-                        <!--                        <suiteXmlFile>target/test-classes/StatefarmsTestRunner.xml</suiteXmlFile>-->
+                       // <suiteXmlFile>target/test-classes/StateFarmTestRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/ReiTestRunner.xml</suiteXmlFile>
+                        //<suiteXmlFile>target/test-classes/BookingTestRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
 
