@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Booking.com" />
-        <module name="Macys" />
         <module name="Generic" />
         <module name="BankofAmerica" />
         <module name="Statefarms" />
+        <module name="Rei.com" />
       </profile>
     </annotationProcessing>
   </component>
