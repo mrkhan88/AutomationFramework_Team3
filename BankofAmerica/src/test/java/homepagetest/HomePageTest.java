@@ -66,12 +66,10 @@ public class HomePageTest extends WebAPI {
     public void createAccount() throws InterruptedException {
         homePage.openBasicAccount();
     }
-//    @Test(enabled = true)
-//    public void multiWindows() throws InterruptedException {
-//       homePage.tabWindows();
-//
-//    }
+    @Test(enabled = true)
+    public void fillForm() throws InterruptedException {
+      homePage.fillInForm();
 
-    public static class MacysHomePageTest {
     }
+
 }

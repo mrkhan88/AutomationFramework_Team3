@@ -13,8 +13,5 @@
         <module name="Rei" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Rei" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
