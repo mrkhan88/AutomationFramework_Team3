@@ -7,7 +7,7 @@
     <!--    parallel="tests"  Working Fine but have issue-->
 
 
-    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserStack"/>
         <parameter name="OS" value="windows"/>
         <parameter name="os_version" value="10"/>
