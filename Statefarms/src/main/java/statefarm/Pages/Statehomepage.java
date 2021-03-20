@@ -1,4 +1,4 @@
-package homepage;
+package statefarm.Pages;
 
 import common.WebAPI;
 import org.openqa.selenium.WebElement;
@@ -10,8 +10,6 @@ public class Statehomepage extends WebAPI {
 public final String login_xp = "//span[text()='LOG IN']";
 
 @FindBy (how = How.XPATH, using = login_xp) public WebElement loginButton;
-
-
 
 public void clickLogin(){
     loginButton.click();

@@ -179,8 +179,8 @@ public class WebAPI {
         return driver;
     }
 
-    public WebDriver getCloudDriver(String envName, String envUsername, String envAccessKey, String os, String os_version, String browserName,
-                                    String browserVersion) throws IOException {
+    public WebDriver getCloudDriver(String envName, String envUsername, String envAccessKey, String os, String os_version,
+                                    String browserName, String browserVersion) throws IOException {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability("browser", browserName);
         cap.setCapability("browser_version", browserVersion);
@@ -209,8 +209,12 @@ public class WebAPI {
 // Helper Method
     // Our code should be dynamic and reusable
 
-    public static void sleepFor(int seconds) throws InterruptedException {
-        Thread.sleep(seconds * 1000);
+    public static void sleepFor(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void clickOnElement(String locator) {

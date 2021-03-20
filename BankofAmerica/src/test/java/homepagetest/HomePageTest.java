@@ -1,9 +1,8 @@
 package homepagetest;
 
 import common.WebAPI;
-import homepage.HomePage;
+import statefarm.Pages.HomePage;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

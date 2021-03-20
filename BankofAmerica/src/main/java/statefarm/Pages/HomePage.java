@@ -1,11 +1,9 @@
-package homepage;
+package statefarm.Pages;
 
 import common.WebAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
-import static homepage.HomePageWebElement.*;
 
 public class HomePage  extends WebAPI {
     // Action Method class
@@ -14,7 +12,7 @@ public class HomePage  extends WebAPI {
 
 
     // Find By Annotation: First Approach
-    @FindBy (how = How.XPATH, using = aboutUs_xp) public WebElement aboutUS;
+    @FindBy (how = How.XPATH, using = HomePageWebElement.aboutUs_xp) public WebElement aboutUS;
 
 public void clickAboutUS(){
     aboutUS.click();
