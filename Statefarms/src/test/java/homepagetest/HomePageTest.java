@@ -1,9 +1,8 @@
 package homepagetest;
 
 import common.WebAPI;
-import homepage.HomePage;
+import homepage.StateFarmHomePage;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -11,11 +10,11 @@ public class HomePageTest extends WebAPI {
     // Test class
 
     //instance of HomepageClass
-    HomePage homePage;
+    StateFarmHomePage homePage;
 
     @BeforeMethod
     public void getInit() {
-        homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage = PageFactory.initElements(driver, StateFarmHomePage.class);
 
     }
 

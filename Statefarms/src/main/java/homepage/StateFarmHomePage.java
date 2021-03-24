@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import static homepage.HomePageWebElement.*;
+import static homepage.StateFarmHomePageWebElement.*;
 
-public class HomePage  extends WebAPI {
+public class StateFarmHomePage extends WebAPI {
     // Action Method class
 
     // Find By Annotation: First Approach

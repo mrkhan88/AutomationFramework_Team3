@@ -17,7 +17,7 @@ public class ReiHomePageTest extends WebAPI {
         reihomePage = PageFactory.initElements(driver, ReiHomePage.class);
 
     }
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void mouseHover() throws InterruptedException {
         reihomePage.searchInput();
     }
