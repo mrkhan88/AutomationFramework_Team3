@@ -11,8 +11,8 @@
     <parameter name="cloudEnvName" value="browserStack"/>
     <!--    <parameter name="OS" value="windows"/>-->
     <!--    <parameter name="os_version" value="10"/>-->
-    <parameter name="OS" value="OS X"/>
-    <parameter name="os_version" value="Big Sur"/>
+    <parameter name="OS" value="windows"/>
+    <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="89"/>
     <!--        <parameter name="browserName" value="firefox"/>-->
