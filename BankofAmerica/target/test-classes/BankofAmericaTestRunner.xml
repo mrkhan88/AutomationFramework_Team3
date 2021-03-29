@@ -11,8 +11,8 @@
     <parameter name="cloudEnvName" value="browserStack"/>
     <!--    <parameter name="OS" value="windows"/>-->
     <!--    <parameter name="os_version" value="10"/>-->
-    <parameter name="OS" value="OS X"/>
-    <parameter name="os_version" value="Big Sur"/>
+<!--    <parameter name="OS" value="OS X"/>-->
+<!--    <parameter name="os_version" value="Big Sur"/>-->
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="89"/>
     <!--        <parameter name="browserName" value="firefox"/>-->
@@ -20,12 +20,12 @@
     <parameter name="url" value="https://bankofamerica.com//"/>
 
 
-    <test name="BankofAmerica test">
+    <test name="BankOfAmerica test">
         <parameter name="browserName" value="chrome"/>
         <parameter name="browserVersion" value="89"/>
         <classes>
             <!--        Calling Test class-->
-            <class name="homepagetest.HomePageTest">
+            <class name="homepagetest.BankOfAmericaTest">
 
             </class>
 
