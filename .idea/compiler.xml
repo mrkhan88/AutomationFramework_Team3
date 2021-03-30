@@ -7,11 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Generic" />
-        <module name="Macys" />
+        <module name="Statefarms" />
         <module name="Booking.com" />
         <module name="BankofAmerica" />
-        <module name="Statefarms" />
+        <module name="Macys" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Macys" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,12 +1,14 @@
 package homepagetest;
 
 import common.WebAPI;
-import homepage.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import statefarm.Pages.HomePage;
+
+
 
 public class HomePageTest extends WebAPI {
     // Test class
