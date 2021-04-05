@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="AmazonTestSuit" parallel="none" thread-count="2">
+<suite name="BofaTestSuit" parallel="none" thread-count="2">
     <!--    parallel="none"  Working Fine-->
     <!--    parallel="classes"  Working Fine-->
     <!--    parallel="tests"  Working Fine but have issue-->
@@ -17,28 +17,13 @@
     <parameter name="browserVersion" value="89"/>
     <!--        <parameter name="browserName" value="firefox"/>-->
     <!--        <parameter name="browserVersion" value="76.0"/>-->
-    <parameter name="url" value="https://bankofamerica.com//"/>
-
+    <parameter name="url" value="https://bankofamerica.com/"/>
 
     <test name="BankofAmerica test">
-        <parameter name="browserName" value="chrome"/>
-        <parameter name="browserVersion" value="89"/>
         <classes>
-            <!--        Calling Test class-->
-            <class name="homepagetest.HomePageTest">
-
-            </class>
-
-            <!--        Add more Test classes-->
-
+            <class name="homepagetest.HomePageTest"></class>
         </classes>
-
     </test>
 
-
 </suite>
-
-
-
-
 

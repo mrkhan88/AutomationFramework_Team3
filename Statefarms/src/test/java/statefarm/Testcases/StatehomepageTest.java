@@ -1,7 +1,7 @@
 package statefarm.Testcases;
 
 import common.WebAPI;
-import statefarm.Pages.Statehomepage;
+import bofa.Pages.Statehomepage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 

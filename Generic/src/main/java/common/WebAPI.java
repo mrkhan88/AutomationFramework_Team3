@@ -209,12 +209,13 @@ public class WebAPI {
 // Helper Method
     // Our code should be dynamic and reusable
 
-    public static void sleepFor(int seconds) {
+    public static void sleepFor(int seconds)  {
         try {
             Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
+
     }
 
     public void clickOnElement(String locator) {
@@ -523,6 +524,14 @@ public class WebAPI {
         newTabs.remove(oldTab);
         driver1.switchTo().window(newTabs.get(0));
         return driver1;
+    }
+
+    public void handleMouseHover(WebElement webElement1, WebElement webElement2, int timeunint){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(webElement1).perform();
+        WebDriverWait wait = new WebDriverWait(driver, timeunint);
+        wait.until(ExpectedConditions.visibilityOf(webElement2));
+        actions.moveToElement(webElement2).click().perform();
     }
 
     public static boolean isPopUpWindowDisplayed(WebDriver driver1, String locator) {
