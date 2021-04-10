@@ -1,21 +1,28 @@
 package homepageTest;
 
 import common.WebAPI;
-import homepage.Statehomepage;
+import homepagestatefarm.Statehomepage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 
 
 public class StatehomepageTest extends WebAPI {
     Statehomepage homepage;
+
+    @BeforeMethod
+    public void getInit() {
+        homepage = PageFactory.initElements(driver, Statehomepage.class);
+    }
 
 
 
     @Test
     public void loginTest() throws InterruptedException {
 
-        homepage  = PageFactory.initElements(driver, Statehomepage.class);
+        //homepage  = PageFactory.initElements(driver, Statehomepage.class);
 
         homepage.clickLogin();
         Thread.sleep(5000);

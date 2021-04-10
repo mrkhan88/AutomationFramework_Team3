@@ -10,11 +10,12 @@
         <module name="Statefarms" />
         <module name="Booking.com" />
         <module name="BankofAmerica" />
-        <module name="Macys" />
+        <module name="Rei.com" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Macys" target="11" />
+      <module name="Rei.com" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

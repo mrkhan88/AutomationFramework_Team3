@@ -2,11 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Statefarm TestSuit" parallel="none" thread-count="2">
-    <!--    parallel="none"  Working Fine-->
-    <!--    parallel="classes"  Working Fine-->
-    <!--    parallel="tests"  Working Fine but have issue-->
-
-
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserStack"/>
     <!--    <parameter name="OS" value="windows"/>-->
@@ -19,33 +14,16 @@
     <!--        <parameter name="browserVersion" value="76.0"/>-->
     <parameter name="url" value="https://www.statefarm.com/"/>
 
-
     <test name="Statefarm Automation Test Script using chrome">
-        <parameter name="browserName" value="chrome"/>
-        <parameter name="browserVersion" value="89"/>
         <classes>
-            <!--        Calling Test class-->
-<<<<<<< HEAD
-            <class name="homepageTest.StatehomepageTest">
-                <methods>
-                    <!--               Test case include or exclude-->
-                    <!--               <exclude name="testSearchbox"></exclude>-->
-                    <!--               <include name="testLogin"></include>-->
-                </methods>
-=======
-<!--            <class name="statefarm.Testcases.StatehomepageTest"/>-->
->>>>>>> e4c755a975298c068b883e93f8c63c764d10f3cb
-
-
-<!--            <class name="statefarm.Testcases.FileClaimTest"/>-->
-            <class name="statefarm.Testcases.InsuranceTest"/>
-
-            <!--        Add more Test classes-->
-
+            <!--            <class name="statefarm.Testcases.FileClaimTest"/>-->
+            <class name="homepageTest.StatehomepageTest"/>
         </classes>
     </test>
 
 
 </suite>
+
+
 
 

@@ -7,32 +7,28 @@
     <!--    parallel="tests"  Working Fine but have issue-->
 
 
-    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="useCloudEnv" value="False"/>
     <parameter name="cloudEnvName" value="browserStack"/>
     <!--    <parameter name="OS" value="windows"/>-->
     <!--    <parameter name="os_version" value="10"/>-->
-    <parameter name="OS" value="OS X"/>
-    <parameter name="os_version" value="Big Sur"/>
+    <parameter name="OS" value="windows"/>
+    <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="89"/>
     <!--        <parameter name="browserName" value="firefox"/>-->
     <!--        <parameter name="browserVersion" value="76.0"/>-->
-    <parameter name="url" value="https://www.amazon.com/"/>
+    <parameter name="url" value="https://https://www.rei.com///"/>
 
 
-    <test name="Amazon Automation Test Script using chrome">
+    <test name="Rei test">
         <parameter name="browserName" value="chrome"/>
         <parameter name="browserVersion" value="89"/>
         <classes>
             <!--        Calling Test class-->
-            <class name="homepagetest.HomePageTest">
-                <methods>
-                    <!--               Test case include or exclude-->
-                    <!--               <exclude name="testSearchbox"></exclude>-->
-                    <!--               <include name="testLogin"></include>-->
-                </methods>
+            <class name="homepagetest.HomePageBookingTest">
 
             </class>
+
 
             <!--        Add more Test classes-->
 
@@ -41,10 +37,5 @@
     </test>
 
 
-
 </suite>
-
-
-
-
 
