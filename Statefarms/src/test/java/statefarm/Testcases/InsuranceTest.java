@@ -13,7 +13,7 @@ public class InsuranceTest extends WebAPI {
     public void getInit(){
         insurancepage= PageFactory.initElements(driver, InsurancePage.class);
     }
-    @Test
+    @Test (priority = 1)
     public void insTest(){
         insurancepage.clickInsurance();
         insurancepage.clickHome();
