@@ -12,41 +12,26 @@ import java.util.List;
 
 public class SignInPage extends WebAPI {
 
-    Sqldatabase sdb = new Sqldatabase();;
+    Sqldatabase sdb = new Sqldatabase();
     String rss;
 
     @FindBy(how = How.ID, using = SigninWeblement.signinput) public WebElement signIninput;
     @FindBy(xpath = "//input[@id='passcode1']") public WebElement passwordinputField;
     @FindBy(xpath = "//span[text()='Sign In']") public WebElement signinButton;
 
-   /* public void typeinSigninField(){
-        signIninput.sendKeys("abcd");
-//        driver.findElement(By.id("onlineId1")).sendKeys("acacd");
-    }
+    public void typeinSigninField(String uname) {
 
-    public void typeinPasswordField(){
-        passwordinputField.sendKeys("Abcd");
-    }
-    public void clickonsigninButton(){
-        signinButton.click();
-    }*/
+        //rss = sdb.connectDatab("signinCredential","id","101","username");
 
-    //========================
-
-    public void typeinSigninField() {
-
-//        sdb = new Sqldatabase();
-        rss = sdb.connectDatab("movie","id","101","title");
-
-        signIninput.sendKeys(rss);
+        signIninput.sendKeys(uname);
 
     }
 
-    public void typeinPasswordField(){
+    public void typeinPasswordField(String pwd){
 
-//        sdb = new Sqldatabase();
-        rss = sdb.connectDatab("movie","id","101","genre");
-        passwordinputField.sendKeys(rss);
+
+        rss = sdb.connectDatab("signinCredential","id","101","password");
+        passwordinputField.sendKeys(pwd);
     }
 
     public void clickonsigninButton(){

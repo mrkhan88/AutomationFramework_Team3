@@ -1,5 +1,7 @@
 package databases;
 
+import org.testng.annotations.DataProvider;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -136,7 +138,7 @@ public class ConnectToSqlDB {
         }
         return data;
     }
-
+/////////////
     /*public void insertDataFromArrayListToSqlTable(List<Student> list, String tableName, String columnName)
     {
         try {
@@ -158,7 +160,7 @@ public class ConnectToSqlDB {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-    }*/
+    } */
     public void insertDataFromArrayListToSqlTable(List<String> list, String tableName, String columnName)
     {
         try {

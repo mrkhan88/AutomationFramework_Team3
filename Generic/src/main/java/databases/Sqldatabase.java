@@ -16,7 +16,6 @@ public class Sqldatabase {
         ResultSet rs;
         String sqldata = null;
 
-
         //need to parameterized
         String query = "select * from movie where id  = 101 ";
         String query1 = "select * from "+ tablename +" where " + columnforRow +"  = "+columnvalue+" ";
@@ -39,7 +38,7 @@ public class Sqldatabase {
                 connection.close();
                 statement.close();
             } catch (SQLException sq) {
-
+                sq.printStackTrace();
             }
 
         }

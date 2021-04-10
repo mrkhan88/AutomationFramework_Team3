@@ -525,13 +525,33 @@ public class WebAPI {
         driver1.switchTo().window(newTabs.get(0));
         return driver1;
     }
+    //*********************************//
+    public void clickMultipleTimes(int startingpointloop, int numberOfClick,WebElement webElement) {
+        while (startingpointloop <= numberOfClick) {
+            webElement.click();
+            startingpointloop++;
 
-    public void handleMouseHover(WebElement webElement1, WebElement webElement2, int timeunint){
+        }
+    }
+
+    public void handleMouseHover(WebElement webElement1, WebElement webElement2click, int timeunint){
         Actions actions = new Actions(driver);
         actions.moveToElement(webElement1).perform();
         WebDriverWait wait = new WebDriverWait(driver, timeunint);
-        wait.until(ExpectedConditions.visibilityOf(webElement2));
-        actions.moveToElement(webElement2).click().perform();
+        wait.until(ExpectedConditions.visibilityOf(webElement2click));
+        actions.moveToElement(webElement2click).click().perform();
+    }
+
+    public void clickByWebElements(By byclass, String text) {  //For clicking using List of WebElement, need to store locator in BY class
+        List<WebElement> muliWebElements = driver.findElements(byclass);
+
+        for (WebElement eWebElement : muliWebElements) {
+            if (eWebElement.getText().contains(text)) {
+                eWebElement.click();
+                break;
+            }
+        }
+
     }
 
     public static boolean isPopUpWindowDisplayed(WebDriver driver1, String locator) {
@@ -623,6 +643,10 @@ public class WebAPI {
 
     public void typeByName(String loc, String val) {
         driver.findElement(By.name(loc)).sendKeys(val);
+    }
+///////////////////
+    public void typeByWebElement(WebElement webElement, String val) {
+        webElement.sendKeys(val);
     }
 
     // ------------------- CLICK -----------------

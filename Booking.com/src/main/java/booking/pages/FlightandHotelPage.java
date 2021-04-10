@@ -42,8 +42,6 @@ public class FlightandHotelPage extends WebAPI {
 
     public void typeinWhereToinputbox(){
 
-//        ConnectToSqlDB
-
         whereToinput.sendKeys("Texas");
         sleepFor(3);
     }

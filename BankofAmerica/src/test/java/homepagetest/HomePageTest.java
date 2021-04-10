@@ -1,13 +1,12 @@
 package homepagetest;
 
-import bofa.Pages.BetterMoneyHabitPage;
-import bofa.Pages.RetirementPage;
-import bofa.Pages.SignInPage;
+import bofa.Pages.*;
 import common.WebAPI;
-import bofa.Pages.HomePage;
+import dataprovider.ReadMysqldata;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import utilities.TestDataProvider;
 
 public class HomePageTest extends WebAPI {
     // Test class
@@ -17,6 +16,7 @@ public class HomePageTest extends WebAPI {
     SignInPage signinpage;
     BetterMoneyHabitPage bettermone;
     RetirementPage retirementPage;
+    Signinpage2 login;
 
 
     @BeforeMethod
@@ -25,9 +25,11 @@ public class HomePageTest extends WebAPI {
         signinpage= PageFactory.initElements(driver,SignInPage.class);
         bettermone = PageFactory.initElements(driver, BetterMoneyHabitPage.class);
         retirementPage= PageFactory.initElements(driver, RetirementPage.class);
+        login = PageFactory.initElements(driver, Signinpage2.class);
+
     }
 
-    //@Test(priority = 1)
+    @Test(priority = 1)
     public void aboutUsTest(){
         //homePage= PageFactory.initElements(driver,HomePage.class);
         homePage.clickAboutUS();
@@ -35,17 +37,17 @@ public class HomePageTest extends WebAPI {
         sleepFor(5);
     }
 
-    @Test(priority = 2)
-    public void signinTest() throws Exception {
+    @Test(dataProvider = "mysqldata2", dataProviderClass = ReadMysqldata.class, priority = 2)
+    public void signinTest(String uname, String pwd){
 //        signinpage= PageFactory.initElements(driver,SignInPage.class);
-        signinpage.typeinSigninField();
+        signinpage.typeinSigninField(uname);
         sleepFor(2);
-        signinpage.typeinPasswordField();
+        signinpage.typeinPasswordField(pwd);
         sleepFor(2);
         signinpage.clickonsigninButton();
         sleepFor(3);
     }
-    //@Test(priority = 3)
+    @Test(priority = 3)
     public void betterMoneyHabitTest(){
         bettermone.clickOnMoneyhabit();
         bettermone.clickOnRetirement();
@@ -54,7 +56,7 @@ public class HomePageTest extends WebAPI {
         sleepFor(5);
     }
 
-    //@Test(priority = 4)
+    @Test(priority = 4)
     public void effectOfTimeofRetirementTest(){
         bettermone.clickOnMoneyhabit();
         bettermone.clickOnRetirement();
@@ -65,7 +67,7 @@ public class HomePageTest extends WebAPI {
         sleepFor(5);
     }
 
-    //@Test(priority = 5)
+    @Test(priority = 5)
     public void buildingFoundationTest(){
         bettermone.clickOnMoneyhabit();
         bettermone.clickOnRetirement();
@@ -74,12 +76,33 @@ public class HomePageTest extends WebAPI {
         sleepFor(5);
     }
 
-    //@Test(priority = 6)
+    @Test(priority = 6)
     public void collegeTest(){
         bettermone.clickOnMoneyhabit();
         bettermone.clickOnRetirement();
         retirementPage.clickTerms();
         sleepFor(5);
+    }
+    @Test(dataProvider = "mysqldata", dataProviderClass = ReadMysqldata.class, priority = 7)
+    public void login2(String uname, String pwd){
+        login.typeinSigninField(uname);
+        sleepFor(2);
+        login.typeinPasswordField(pwd);
+        sleepFor(2);
+        login.clickonsigninButton();
+        sleepFor(5);
+
+    }
+
+    @Test(dataProvider = "getexcelData", dataProviderClass = TestDataProvider.class, priority = 8)
+    public void login3(String uname, String pwd){
+        login.typeinSigninField(uname);
+        sleepFor(2);
+        login.typeinPasswordField(pwd);
+        sleepFor(2);
+        login.clickonsigninButton();
+        sleepFor(5);
+
     }
 
 
