@@ -28,8 +28,8 @@
 <!--            <class name="statefarm.Testcases.StatehomepageTest"/>-->
 
 
-<!--            <class name="statefarm.Testcases.FileClaimTest"/>-->
-            <class name="statefarm.Testcases.InsuranceTest"/>
+<!--            <class name="statefarm.Testcases.homePageTest"/>-->
+            <class name="statefarm.Testcases.homePageTest"/>
 
             <!--        Add more Test classes-->
 

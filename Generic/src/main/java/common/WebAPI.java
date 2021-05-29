@@ -423,11 +423,14 @@ public class WebAPI {
         return items;
     }
 
+    public void selectOptionByVisibleText(String element, String value) {
+//        Select select = new Select(element);
+//        select.selectByVisibleText(value);
+    }
     public void selectOptionByVisibleText(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByVisibleText(value);
     }
-
     public void mouseHoverByCSS(String locator) {
         try {
             WebElement element = driver.findElement(By.cssSelector(locator));
@@ -613,6 +616,7 @@ public class WebAPI {
     }
 
     public void typeByName(String loc, String val) {
+
         driver.findElement(By.name(loc)).sendKeys(val);
     }
 
@@ -729,7 +733,7 @@ public class WebAPI {
         driver.getTitle();
     }
 
-    public void clearField1(String locator) {
+    public void clearField1(String locator) throws IOException {
         try {
             driver.findElement(By.cssSelector(locator)).clear();
         } catch (Exception ex) {

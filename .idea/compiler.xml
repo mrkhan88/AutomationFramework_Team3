@@ -11,7 +11,11 @@
         <module name="BankofAmerica" />
         <module name="Statefarms" />
         <module name="Rei.com" />
+        <module name="Rei" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="main" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
